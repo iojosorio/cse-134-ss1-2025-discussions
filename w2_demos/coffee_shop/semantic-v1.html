@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The Daily Brew Coffee</title>
+    <!-- TODO: Insert icon -->
+  </head>
+
+  <body>
+
+    <!-- TODO: Add noscript tag -->
+    <header>
+      <!-- TODO: Add a small tagline for the heading "Your neighborhood coffee shop" with hrgroup tag -->
+      <h1>The Daily Brew Coffee</h1>
+
+      <!-- TODO: Add nav links to go to diff sections (also add IDs to sections) -->
+    </header>
+
+    <main>
+
+      <!-- TODO: Add a "Did You Know?" section using aside and highlight some text using mark tag -->
+      <!-- TODO: Also add a "Fun Fact about Coffee" accordion (click to expand) within aside using details and summary tags -->
+    
+      <section>
+        <!-- TODO: Wrap each coffee type and its details in an article tag -->
+
+        <h2>Espresso</h2>
+        <!-- TODO: Convert text following images to captions and Wrap image + caption into figure tag -->
+        <img src="assets/espresso.jpg" alt="Espresso" width="400">
+        <p>Rich, bold single shot pulled fresh to order.</p>
+        <p>
+          Espresso is a concentrated coffee brewed by forcing hot water under pressure through finely-ground coffee beans. 
+          Known for its rich aroma and bold taste, espresso serves as the base for many popular drinks. 
+          It's traditionally enjoyed as a quick shot but can also be sipped slowly to appreciate the depth of its roasted flavor. 
+          Despite its small size, it delivers a strong caffeine kick and a lingering crema on top.
+        </p>
+
+        <h2>Cappuccino</h2>
+        <img src="assets/cappuccino.jpg" alt="Cappuccino" width="400">
+        <p>Equal parts espresso, steamed milk, and foam.</p>
+        <p>
+          Cappuccino is a classic Italian coffee drink made with equal parts espresso, steamed milk, and milk foam. 
+          Its velvety texture and balanced flavor make it a staple in cafes worldwide. 
+          The frothy top layer helps retain heat and adds a creamy mouthfeel. 
+          Often served in smaller cups than a latte, cappuccinos offer a bold yet smooth experience, perfect for a mid-morning boost or relaxed café break.
+        </p>
+        
+        <h2>Iced Mocha</h2>
+        <img src="assets/iced_mocha.jpg" alt="Iced Mocha" width="400">
+        <p>Chocolate, espresso, milk, served over ice.</p>
+        <p>
+          A refreshing blend of chocolate and coffee, iced mocha is perfect for warm days. 
+          It starts with a shot of espresso, mixed with milk and rich chocolate syrup, then poured over ice for a chilled treat. 
+          Often topped with whipped cream, it's a sweet, energizing drink that strikes a balance between dessert and caffeine fix. 
+          Its smooth texture and cooling effect make it a favorite for summer coffee lovers.
+        </p>
+
+      </section>
+
+      <section>
+        <h3>Hours</h3>
+        <p>Mon-Fri&nbsp;10:00AM - 5:00PM<br>Sat & Sun&nbsp;10:00AM - 2:00PM</p>
+      </section>
+
+      <section>
+        <h2>Choose Your Favorite Drink</h2>
+        <form action="/submit" method="post">
+          <!-- TODO: Add a fieldset to group related form tags -->
+
+          <label for="drink">Pick one:</label><br>
+          <select id="drink" name="drink" required>
+            <option value="" hidden>Select a drink</option>
+            <option value="espresso">Espresso</option>
+            <option value="cappuccino">Cappuccino</option>
+            <option value="iced-mocha">Iced Mocha</option>
+          </select>
+          <br><br>
+
+          <label for="reason">Why?</label><br>
+          <textarea id="reason" name="reason" rows="4" cols="40" required></textarea>
+          <br><br>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Contact</h2>
+      <strong>The Daily Brew</strong><br>
+
+      <!-- TODO: Wrap this information in address tag -->
+      Website:
+      <a href="https://www.dailybrewcoffee.com" target="_blank">
+        www.thedailybrewcoffee.com
+      </a><br>
+      123 Gilman Dr., La Jolla, CA, USA<br>
+      +1(619)123-4567
+    </footer>
+  </body>
+</html>
