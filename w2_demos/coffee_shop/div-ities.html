@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The Daily Brew Coffee</title>
+  </head>
+  <body>
+    <h1>Our Menu</h1>
+
+    <div>
+      <h2>Espresso</h2>
+      <img src="assets/espresso.jpg" alt="Espresso" width="400">
+      <div>Rich, bold single shot pulled fresh to order.</div>
+
+      <h2>Cappuccino</h2>
+      <img src="assets/cappuccino.jpg" alt="Cappuccino" width="400">
+      <div>Equal parts espresso, steamed milk, and foam.</div>
+
+      <h2>Iced Mocha</h2>
+      <img src="assets/iced_mocha.jpg" alt="Iced Mocha" width="400">
+      <div>Chocolate, espresso, milk, served over ice.</div>
+    </div>
+
+    <footer>
+      <div>
+        <h2>Choose Your Favorite Drink</h2>
+        <form action="/submit" method="post">
+          <div>
+            <label for="drink">Pick one:</label><br>
+            <select id="drink" name="drink" required>
+              <option value="espresso">Espresso</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="iced-mocha">Iced Mocha</option>
+            </select>
+            <br><br>
+          </div>
+          <div>
+            <label for="reason">Why?</label><br>
+            <textarea id="reason" name="reason" rows="4" cols="40" required></textarea><br><br>
+          </div>
+          <div><button type="submit">Submit</button></div>
+        </form>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <div><strong>The Daily Brew</strong></div>
+        <div>
+          Website:
+          <a href="https://www.dailybrewcoffee.com" target="_blank">www.thedailybrewcoffee.com</a>
+        </div>
+        <div>123 Gilman Dr., La Jolla, CA, USA</div>
+        <div>Phone: (619) 123‑4567</div>
+      </div>
+  </footer>
+
+  </body>
+</html>
