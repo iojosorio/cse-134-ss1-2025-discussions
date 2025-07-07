@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Coffee Card using Custom Element</title>
+  <style>
+    /* TODO: Replace class ref with semantic css */
+    .card {
+      width: 220px;
+      height: 300px;
+      margin: 12px;
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .card img { width: 100%; height: 60%; border-radius: 4px; }
+    
+    /* TODO: Use coffee type attribute of custom element */
+    .card.espresso   { background:#f8ede4; }
+    .card.cappuccino { background:#fef6e4; }
+    .card.mocha      { background:#e9f7f6; }
+  </style>
+</head>
+<body>
+  <!-- TODO: Replace divs with custom elements and add coffee type as an attribute -->
+  <div class="card espresso">
+    <h2>Espresso</h2>
+    <img src="assets/espresso.jpg" alt="Espresso">
+    <p>Bold single shot.</p>
+  </div>
+
+  <div class="card cappuccino">
+    <h2>Cappuccino</h2>
+    <img src="assets/cappuccino.jpg" alt="Cappuccino">
+    <p>Foamy &amp; balanced.</p>
+  </div>
+
+  <div class="card mocha">
+    <h2>Iced Mocha</h2>
+    <img src="assets/iced_mocha.jpg" alt="Iced Mocha">
+    <p>Chocolate on ice.</p>
+  </div>
+</body>
+</html>

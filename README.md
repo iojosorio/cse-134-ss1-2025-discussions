@@ -11,6 +11,7 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 **B.** `w2_demos/custom-element`:
 - `div-classes.html`: Different coffee cards styled differently based on class attributes
 - TODO: same styling and feel but with custom elements in css
+- `custom-element-css.html`: Same styling achieved using Semantic CSS custom element
 
 **C.** `w2_demos/other_semantic_tags`:
 - `iframe-progress.html`: Demonstrates use of `<iframe>` and `<progress>` elements
