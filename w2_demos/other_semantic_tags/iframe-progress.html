@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iframe and Progress Demo</title>
+</head>
+<body>
+  <section>
+    <h1>Embedded Page Example</h1>
+    <p>This <code>&lt;iframe&gt;</code> embeds a Wiki page inside our page.</p>
+
+    <iframe
+      src="https://en.wikipedia.org/wiki/Lionel_Messi"
+      width="600"
+      height="400"
+      title="wiki - Messi"
+    >
+    </iframe>
+  </section>
+
+  <section>
+    <h2>Static Progress Bars</h2>
+    <ul>
+      <li>
+        <label for="task1">Task 1: 50% complete</label>
+        <progress id="task1" value="50" max="100"></progress>
+      </li>
+
+      <li>
+        <label for="task2">Task 2: 20% complete</label>
+        <progress id="task2" value="20" max="100"></progress>
+      </li>
+
+      <li> 
+        <label for="task3">Task 3: 100% complete</label>
+        <progress id="task3" value="100" max="100"></progress>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Picture Demo</title>
+</head>
+<body>
+  <h1>Responsive Images supporting Multiple Formats</h1>
+  <p><code>&lt;picture&gt;</code> is useful to serve different images cropped or composed differently depending on screen size and resolution. Efficient image formats like <strong>AVIF</strong> or <strong>WebP</strong> can be used for browsers that support them and fallback to older formats like <strong>JPEG</strong> and <strong>PNG</strong> for browsers that don't.</p>
+  <picture>
+    <!-- Large screens: AVIF (best compression & quality but poor compatibility) if supported -->
+    <source
+      srcset="assets/mountain.avif"
+      media="(min-width: 700px)"
+      type="image/avif"
+    />
+    <!-- Large screens: fallback JPEG (good compatibility, lossy compression) -->
+    <source
+      srcset="assets/mountain.jpeg"
+      media="(min-width: 700px)"
+      type="image/jpeg"
+      alt="A large mountain for a large page"
+    />
+    <!-- Small screens: WebP (great compression, widely supported) if supported -->
+    <source
+      srcset="assets/mountain.webp"
+      type="image/webp"
+    />
+    <!-- Fallback: PNG (lossless, larger size) -->
+    <img
+      src="assets/mountain.png"
+      width="300"
+      height="200"
+      alt="A small mountain for a small page"
+    />
+  </picture>
+  <p>Resize the window to see how the browser selects the best image format and size.</p>
+</body>
+</html>
