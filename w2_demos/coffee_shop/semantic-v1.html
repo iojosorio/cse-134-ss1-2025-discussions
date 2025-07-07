@@ -4,69 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>The Daily Brew Coffee</title>
-    <!-- TODO: Insert icon -->
+    <link rel="icon" href="assets/coffee_logo.ico" type="image/x-icon">
   </head>
-
   <body>
+    <noscript>Please enable JavaScript for full functionality.</noscript>
 
-    <!-- TODO: Add noscript tag -->
     <header>
-      <!-- TODO: Add a small tagline for the heading "Your neighborhood coffee shop" with hrgroup tag -->
-      <h1>The Daily Brew Coffee</h1>
-
-      <!-- TODO: Add nav links to go to diff sections (also add IDs to sections) -->
+      <hgroup>
+        <h1>The Daily Brew Coffee</h1>
+        <p>Your neighborhood coffee spot</p>
+      </hgroup>
+      <nav>
+        <ul>
+          <li><a href="#coffee-types">Coffee Types</a></li>
+          <li><a href="#timings">Timings</a></li>
+          <li><a href="#user-feedback">Feedback</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <aside>
+        <hr>
+          <h4>Did you know?</h4>
+          <p>We roast our beans <mark>every Monday</mark> for peak freshness.</p>
+          <details>
+            <summary>Click to know a Fun Fact about Coffee</summary>
+            The word <em>“espresso”</em> means <em>“pressed-out”</em> in Italian.
+          </details>
+        <hr>
+      </aside>
 
-      <!-- TODO: Add a "Did You Know?" section using aside and highlight some text using mark tag -->
-      <!-- TODO: Also add a "Fun Fact about Coffee" accordion (click to expand) within aside using details and summary tags -->
-    
-      <section>
-        <!-- TODO: Wrap each coffee type and its details in an article tag -->
+      <section id="coffee-types">
+        <article>
+          <h2>Espresso</h2>
+          <figure>
+            <img src="assets/espresso.jpg" alt="Espresso" width="400">
+            <figcaption>Rich, bold single shot pulled fresh to order.</figcaption>
+          </figure>
+          <p>
+            Espresso is a concentrated coffee brewed by forcing hot water under pressure through finely-ground coffee beans. 
+            Known for its rich aroma and bold taste, espresso serves as the base for many popular drinks. 
+            It's traditionally enjoyed as a quick shot but can also be sipped slowly to appreciate the depth of its roasted flavor. 
+            Despite its small size, it delivers a strong caffeine kick and a lingering crema on top.
+          </p>
+        </article>
 
-        <h2>Espresso</h2>
-        <!-- TODO: Convert text following images to captions and Wrap image + caption into figure tag -->
-        <img src="assets/espresso.jpg" alt="Espresso" width="400">
-        <p>Rich, bold single shot pulled fresh to order.</p>
-        <p>
-          Espresso is a concentrated coffee brewed by forcing hot water under pressure through finely-ground coffee beans. 
-          Known for its rich aroma and bold taste, espresso serves as the base for many popular drinks. 
-          It's traditionally enjoyed as a quick shot but can also be sipped slowly to appreciate the depth of its roasted flavor. 
-          Despite its small size, it delivers a strong caffeine kick and a lingering crema on top.
-        </p>
+        <article>
+          <h2>Cappuccino</h2>
+          <figure>
+            <img src="assets/cappuccino.jpg" alt="Cappuccino" width="400">
+            <figcaption>Foamy perfection.</figcaption>
+          </figure>
+          <p>
+            Cappuccino is a classic Italian coffee drink made with equal parts espresso, steamed milk, and milk foam. 
+            Its velvety texture and balanced flavor make it a staple in cafes worldwide. 
+            The frothy top layer helps retain heat and adds a creamy mouthfeel. 
+            Often served in smaller cups than a latte, cappuccinos offer a bold yet smooth experience, perfect for a mid-morning boost or relaxed café break.
+          </p>
+        </article>
 
-        <h2>Cappuccino</h2>
-        <img src="assets/cappuccino.jpg" alt="Cappuccino" width="400">
-        <p>Equal parts espresso, steamed milk, and foam.</p>
-        <p>
-          Cappuccino is a classic Italian coffee drink made with equal parts espresso, steamed milk, and milk foam. 
-          Its velvety texture and balanced flavor make it a staple in cafes worldwide. 
-          The frothy top layer helps retain heat and adds a creamy mouthfeel. 
-          Often served in smaller cups than a latte, cappuccinos offer a bold yet smooth experience, perfect for a mid-morning boost or relaxed café break.
-        </p>
-        
-        <h2>Iced Mocha</h2>
-        <img src="assets/iced_mocha.jpg" alt="Iced Mocha" width="400">
-        <p>Chocolate, espresso, milk, served over ice.</p>
-        <p>
-          A refreshing blend of chocolate and coffee, iced mocha is perfect for warm days. 
-          It starts with a shot of espresso, mixed with milk and rich chocolate syrup, then poured over ice for a chilled treat. 
-          Often topped with whipped cream, it's a sweet, energizing drink that strikes a balance between dessert and caffeine fix. 
-          Its smooth texture and cooling effect make it a favorite for summer coffee lovers.
-        </p>
-
+        <article>
+          <h2>Iced Mocha</h2>
+          <figure>
+            <img src="assets/iced_mocha.jpg" alt="Iced Mocha" width="400">
+            <figcaption>Chocolate, espresso, milk, served over ice.</figcaption>
+          </figure>
+          <p>
+            A refreshing blend of chocolate and coffee, iced mocha is perfect for warm days. 
+            It starts with a shot of espresso, mixed with milk and rich chocolate syrup, then poured over ice for a chilled treat. 
+            Often topped with whipped cream, it's a sweet, energizing drink that strikes a balance between dessert and caffeine fix. 
+            Its smooth texture and cooling effect make it a favorite for summer coffee lovers.
+          </p>
+        </article>
       </section>
 
-      <section>
+      <section id="timings">
         <h3>Hours</h3>
         <p>Mon-Fri&nbsp;10:00AM - 5:00PM<br>Sat & Sun&nbsp;10:00AM - 2:00PM</p>
       </section>
 
-      <section>
+      <section id="user-feedback">
         <h2>Choose Your Favorite Drink</h2>
         <form action="/submit" method="post">
-          <!-- TODO: Add a fieldset to group related form tags -->
+
+          <fieldset>
+            <legend>What matters the most to you?</legend>
+            <label><input type="radio" name="priority" value="flavor" required>Flavor</label><br>
+            <label><input type="radio" name="priority" value="caffeine">Caffeine kick</label><br>
+            <label><input type="radio" name="priority" value="instagram">Instagram-ability</label>
+          </fieldset><br>
 
           <label for="drink">Pick one:</label><br>
           <select id="drink" name="drink" required>
@@ -89,14 +116,14 @@
     <footer>
       <h2>Contact</h2>
       <strong>The Daily Brew</strong><br>
-
-      <!-- TODO: Wrap this information in address tag -->
-      Website:
-      <a href="https://www.dailybrewcoffee.com" target="_blank">
-        www.thedailybrewcoffee.com
-      </a><br>
-      123 Gilman Dr., La Jolla, CA, USA<br>
-      +1(619)123-4567
+      <address>
+        Website:
+        <a href="https://www.dailybrewcoffee.com" target="_blank">
+          www.thedailybrewcoffee.com
+        </a><br>
+        123 Gilman Dr., La Jolla, CA, USA<br>
+        +1(619)123-4567
+      </address>
     </footer>
   </body>
 </html>
