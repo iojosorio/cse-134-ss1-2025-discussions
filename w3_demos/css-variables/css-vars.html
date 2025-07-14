@@ -9,6 +9,7 @@
       --primary-color: teal;
       --text-color: white;
       --padding-size: 15px;
+      --font-size-test: 20px;
     }
 
     .card {
@@ -27,6 +28,7 @@
         padding: var(--padding-size);
         margin-left: 10px;
         border-left: 3px solid;
+        font-size: var(--font-size, 12px); /* fallback value */
     }
     /* TODO 1: Add a new variable for font size and use it in .card, decrease it by 5px for .card .local */
     /* TODO 2: Add a fallback for --text-color in .card */

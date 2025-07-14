@@ -13,9 +13,12 @@
             display: grid;
             background-color: powderblue;
             padding: 10px;
-            grid-template-columns: 50% 50%; /* two columns with equal width */ 
-            -grid-template-columns: auto auto; /* analogous to previous line */
+            -grid-template-columns: 50% 50%; /* two columns with equal width */ 
+            -grid-template-columns: auto auto auto; /* analogous to previous line */
+            grid-template-columns: repeat(3, 1fr); /* fr: fractional unit -> x fr : x parts out of whole */
+            grid-template-rows: repeat(4, 1fr);
             border: 2px dashed black;
+            gap: 10px;
             /* TODO 2: Add 10px gap between cells */
         }
 
@@ -27,6 +30,11 @@
         }
         .item1 {
             background-color: tomato;
+            -grid-row-start: 2;
+            -grid-column-start: 1;
+            -grid-row-end: 4;
+            -grid-column-end: 3;
+            grid-area: 2/1/4/3; /* short hand for above 4 properties */
         }
         .item2 {
             background-color: black;
@@ -47,6 +55,7 @@
       <div class="grid-item item3">Cell 3</div>
       <div class="grid-item item4">Cell 4</div>
       <div class="grid-item item5">Cell 5</div>
+      <div class="grid-item item6">Cell 6</div>
     </div>
   </body>
 </html>

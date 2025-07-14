@@ -6,23 +6,21 @@
 
   <!-- External CSS -->
   <!-- TODO 1: Create external.css with p { color: pink; } and link it in the head of html -->
+  <link rel="stylesheet" href="external.css" type="text/css">
  
   <!-- Internal CSS -->
   <style>
     /* TODO 5: Combine shared styles for p and h1 elements */
-    h1 {
+    h1,p {
         color: green;
-    }
-    p {
-        color: green;
-    }    
+    }   
   </style>
 </head>
 <body>
 
   <!-- Inline CSS -->
   <!-- TODO 2: Remove inline style to see the effect -->
-  <h1 style="color: purple;">This is an H1 with inline style</h1>
+  <h1>This is an H1 with inline style</h1>
 
   <!-- This will appear green from internal style -->
   <p>This paragraph is styled via internal CSS.</p>

@@ -11,9 +11,10 @@
 
     /* . selector: all elements with class="hightlight" will have bold, blue text */
     /* TODO 1: Enable the foll. styles to see class ref overriding element ref */
-    .highlight {
-      color: blue;
-      font-weight: bold;
+    p.highlight { /* element.classname#idname */
+
+        color: blue;
+        font-weight: bold;
     }
 
     /* TODO 2: Modify the above code to ONLY make text within <p> elements with class="highlight" -> bold and blue, whereas other elements with class="highlight" should stay as is */
@@ -21,7 +22,7 @@
     /* # selector: all elements with id="special" will have red text */    
     /* TODO 3: Enable the foll. styles to see ID ref overriding class ref */
     #special {
-      -color: red;
+      color: red;
     }
 
     /* Combinators - relationships between selectors */
@@ -31,7 +32,7 @@
       }
       /* TODO 6: Enable foll styles to see the background difference - less strict */
       section p {
-        -background-color: pink;
+        background-color: pink;
       }
       /* Sibling relationships: immediate next vs subsequent */
       section ~ p{
@@ -39,11 +40,14 @@
       }
       /* TODO 7: Enable foll styles to see the border changes */
       section + p{
-        -border: 2px solid red;
+        border: 2px solid red;
       }
 
     /* Attribute selector (covered in custom css - week 1 demos) */
     /* TODO 8: Add styling to add a border (2px solid order) to input tag with attr type = text */
+    input[type="text"] { /*no space after the element name*/
+      border: 2px solid orange;
+    }
 
     /* TODO 9: Enable to see this style being applied to every HTML element */
     * {

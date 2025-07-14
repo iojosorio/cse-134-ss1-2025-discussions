@@ -7,6 +7,7 @@
     /* Pseudo-elements use :: operator after selector */
     h2::before {
       content: "👉 ";
+      background-color: orange;
     }
 
     h2::after {
@@ -17,14 +18,25 @@
       font-size: 150%;
       color: crimson;
     }
+
+    p::selection{
+      background-color: yellow;
+    }
     /* TODO 1: Add custom highlight when paragraph text is selected */
 
     /* Pseudo-classes use : operator after selector */
-    button:hover {
-      background-color: lightgreen;
-      cursor: pointer;
+    button{
+      &:hover{
+        background-color: lightgreen;
+        cursor: pointer;
+      }
+      &:active{
+        background-color: blue;
+      }
     }
+   
     /* TODO 2: Add :active for feedback to user while clicking the button */
+    
 
     /* TODO 3: Add nesting for the two button pseudo-classes */
     
@@ -35,6 +47,10 @@
     
     li:first-child {
       font-weight: bold;
+    }
+
+    li:nth-child(even){
+      background-color: lightgray;
     }
 
     /* TODO 4: Alternate white and gray background for the list items */
