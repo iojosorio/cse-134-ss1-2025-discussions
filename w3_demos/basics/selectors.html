@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Selectors</title>
+  <style>
+    /* name selector: all p (paragraph) elements will have green text */
+    p {
+      color: green;
+    }
+
+    /* . selector: all elements with class="hightlight" will have bold, blue text */
+    /* TODO 1: Enable the foll. styles to see class ref overriding element ref */
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* TODO 2: Modify the above code to ONLY make text within <p> elements with class="highlight" -> bold and blue, whereas other elements with class="highlight" should stay as is */
+
+    /* # selector: all elements with id="special" will have red text */    
+    /* TODO 3: Enable the foll. styles to see ID ref overriding class ref */
+    #special {
+      -color: red;
+    }
+
+    /* Combinators - relationships between selectors */
+      /* Nested relationships: descendants vs children (stricter) */
+      section > p{
+        background-color: lightyellow;
+      }
+      /* TODO 6: Enable foll styles to see the background difference - less strict */
+      section p {
+        -background-color: pink;
+      }
+      /* Sibling relationships: immediate next vs subsequent */
+      section ~ p{
+        border: 2px solid blue;
+      }
+      /* TODO 7: Enable foll styles to see the border changes */
+      section + p{
+        -border: 2px solid red;
+      }
+
+    /* Attribute selector (covered in custom css - week 1 demos) */
+    /* TODO 8: Add styling to add a border (2px solid order) to input tag with attr type = text */
+
+    /* TODO 9: Enable to see this style being applied to every HTML element */
+    * {
+        -text-align: center;
+        -color: purple;
+    }
+  </style>
+</head>
+<body>
+  <p>This is a plain paragraph (will be green).</p>
+
+  <p class="highlight">This is a classed paragraph (will be blue and bold).</p>
+  
+  <p id="special" class="highlight">
+    This has class and ID — check which one wins!
+  </p>
+  
+  <!-- TODO 4: Uncomment the foll. block to see which style wins! -->
+  <!-- <p id="special" class="highlight" style="color: magenta;">
+    This has inline, class, and ID — check which one wins!
+  </p> -->
+
+  <br><br>
+
+  <section>
+    <p>This paragraph is a direct child of a section (gets yellow background). </p>
+    <!-- TODO 5: Add a div tag inside this section followed by a p tag inside div to compare background styles -->
+    <div>
+      <p>This is an indirect child of section (doesn't get yellow bg)</p>
+    </div>
+    <p>This paragraph is a direct child of a section (gets yellow background).</p>
+  </section>
+
+  <p>This is the immediate next sibling of section. Hence it's affected by + combinator: shows a red border (once enabled).</p>
+  <p>Unaffected by combinators.</p>
+  <div>
+    <p>Unaffected by combinators.</p>
+  </div>
+  <p>This is the next (and subsequent) sibling of section. Hence it's affected by ~ combinator: shows a blue border.</p>
+  <p>This is a subsequent sibling of div. Hence it's affected by ~ combinator: shows a blue border.</p>
+
+  <br><br>
+
+  <input type="text" placeholder="Attribute selector matches me">
+  <input type="checkbox"> Not matched
+
+  <br><br>
+
+  <h2 class="highlight">This heading will appear bold and blue</h2>
+</body>
+</html>

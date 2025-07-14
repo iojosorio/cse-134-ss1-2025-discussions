@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Inclusion Demo</title>
+
+  <!-- External CSS -->
+  <!-- TODO 1: Create external.css with p { color: pink; } and link it in the head of html -->
+ 
+  <!-- Internal CSS -->
+  <style>
+    /* TODO 5: Combine shared styles for p and h1 elements */
+    h1 {
+        color: green;
+    }
+    p {
+        color: green;
+    }    
+  </style>
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <!-- TODO 2: Remove inline style to see the effect -->
+  <h1 style="color: purple;">This is an H1 with inline style</h1>
+
+  <!-- This will appear green from internal style -->
+  <p>This paragraph is styled via internal CSS.</p>
+
+  <!-- TODO 3: Disable internal style for <p> tag to see the effect -->
+  <!-- TODO 4: Add !important for properties in external.css to see the ultimate override -->
+</body>
+</html>

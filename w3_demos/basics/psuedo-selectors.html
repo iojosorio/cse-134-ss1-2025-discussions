@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pseudo-classes & Pseudo-elements</title>
+  <style>
+    /* Pseudo-elements use :: operator after selector */
+    h2::before {
+      content: "👉 ";
+    }
+
+    h2::after {
+      content: " 🔍";
+    }
+
+    p::first-letter {
+      font-size: 150%;
+      color: crimson;
+    }
+    /* TODO 1: Add custom highlight when paragraph text is selected */
+
+    /* Pseudo-classes use : operator after selector */
+    button:hover {
+      background-color: lightgreen;
+      cursor: pointer;
+    }
+    /* TODO 2: Add :active for feedback to user while clicking the button */
+
+    /* blue background when clicked with mouse or tabbed with keyboard */
+    input:focus {
+      border: 2px solid royalblue;
+    }
+    
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* TODO 3: Alternate white and gray background for the list items */
+  </style>
+</head>
+<body>
+  <h1>Pseudo Selectors Demo</h1>
+  <h2>Pseudo-element selectors are used to select and style <u>parts of an element</u></h2>
+  <p>First letter is styled</p>
+
+  <h2>Pseudo-class selectors are used to select elements based on a certain <u>state</u></h2>
+  <button>Hover over me</button><br><br>
+  <input type="text" placeholder="Click here to focus" />
+
+  <h2>List Styling with :nth-child</h2>
+  <ul>
+    <li>First item (styled with :first-child)</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+  </ul>
+</body>
+</html>
+
