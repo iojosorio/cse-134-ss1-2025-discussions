@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Box Model</title>
+  <style>
+    *{
+      border: 1px solid red;
+    }
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+      border: 3px dashed navy;
+      margin: 10px;
+      width: 200px; /* width of the content area by default */
+      /* TODO 1: Uncomment box-sizing and see how width calculation changes */
+      /* box-sizing: border-box; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">I am a box! Currently my width is 200px.</div>
+  <!-- TODO 2: Add another box with different padding, margin and display to see the difference -->
+</body>
+</html>
