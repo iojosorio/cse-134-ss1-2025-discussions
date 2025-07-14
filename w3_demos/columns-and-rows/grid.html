@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Demo</title>
+  </head>
+  <body>
+    <!-- To help with this, I strongly recommend using https://cssgrid-generator.netlify.app/ -->
+    <style>
+      /* TODO 1: Change grid-template-columns to use repeat() */
+        .grid-container {
+            display: grid;
+            background-color: powderblue;
+            padding: 10px;
+            grid-template-columns: 50% 50%; /* two columns with equal width */ 
+            -grid-template-columns: auto auto; /* analogous to previous line */
+            border: 2px dashed black;
+            /* TODO 2: Add 10px gap between cells */
+        }
+
+       /* TODO 3: Convert container to a 4x4 grid and then move Cell 1 to occupy rows [2-4) & cols [1-3) */
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .item1 {
+            background-color: tomato;
+        }
+        .item2 {
+            background-color: black;
+        }
+        .item3 {
+            background-color: cornflowerblue;
+        }
+        .item4 {
+            background-color: coral;
+        }
+        .item5 {
+            background-color: olive;
+        }
+    </style>
+    <div class="grid-container">
+      <div class="grid-item item1">Cell 1</div>
+      <div class="grid-item item2">Cell 2</div>
+      <div class="grid-item item3">Cell 3</div>
+      <div class="grid-item item4">Cell 4</div>
+      <div class="grid-item item5">Cell 5</div>
+    </div>
+  </body>
+</html>

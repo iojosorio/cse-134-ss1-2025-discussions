@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flexbox Demo</title>
+  <style>
+    /* TODO 1: Try different space options for justify-content */
+    /* TODO 2: Modify to let each flex item occupy the entire vertical space of the container */
+    /* TODO 3: Enable flex wrap to see the responsiveness */
+    /* TODO 4: Change flex direction to 'column' and observe the change of main and cross axes */
+    
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* default is row */
+      justify-content: flex-start; /* justifies flex items along the main axis */
+      align-items: flex-start; /* aligns flex items along the cross axis */
+      height: 100px;
+      background-color: #f0f0f0;
+      border: 2px dotted;
+      flex-wrap: nowrap; /* default is nowrap */
+    }
+
+    .flex-item {
+      background-color: lightgoldenrodyellow;
+      padding: 10px;
+      border: 2px dashed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox Layout</h1>
+  <div class="flex-container">
+    <div class="flex-item">Flexbox arranges items in rows/columns, in a flexible, responsive way.</div>
+    <div class="flex-item">If flex-direction: row, main axis = horizontal and cross axis = vertical.</div>
+    <div class="flex-item">Item 3</div>
+  </div>
+</body>
+</html>

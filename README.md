@@ -26,3 +26,10 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 
 **B.** `w3_demos/boxmodel/`:
 - `box.html`: Understanding the CSS box model.
+
+**C.** `w3_demos/columns-and-rows/`:
+- `flexbox.html`: Demonstrates use of `display:flex` to create responsive row/column layouts with flexible boxes.
+- `grid.html`: Demonstrates use of `display:grid` to create responsive grids using CSS.
+
+**D.** `w3_demos/css-variables/`:
+- `css-vars.html`: Demonstrates basic usage of CSS variables to define reusable properties
