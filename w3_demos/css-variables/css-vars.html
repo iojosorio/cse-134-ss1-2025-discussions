@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Variables Demo</title>
+  <style>
+    /* Declare global variables in root html element accessed using pseudo class ':root' */
+    :root {
+      --primary-color: teal;
+      --text-color: white;
+      --padding-size: 15px;
+    }
+
+    .card {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      padding: var(--padding-size);
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .card.local {
+      --primary-color: tomato; /* scoped override */
+    }
+
+    blockquote{
+        padding: var(--padding-size);
+        margin-left: 10px;
+        border-left: 3px solid;
+    }
+    /* TODO: Add a new variable for font size and use it in .card, decrease it by 5px for .card .local */
+
+  </style>
+</head>
+<body>
+  <h1>CSS Variables</h1>
+  <blockquote>CSS variables allow you to define <strong>reusable values</strong>, like constants in code.</blockquote>
+  <div class="card">
+    This card uses the global theme color.
+  </div>
+
+  <div class="card local">
+    This one overrides the color locally using a scoped variable.
+  </div>
+</body>
+</html>

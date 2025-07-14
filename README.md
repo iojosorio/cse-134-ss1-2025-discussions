@@ -32,4 +32,4 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 - `grid.html`: Demonstrates use of `display:grid` to create responsive grids using CSS.
 
 **D.** `w3_demos/css-variables/`:
-- `css-vars.html`: Demonstrates basic usage of CSS variables to define reusable properties
+- `css-vars.html`: Demonstrates basic usage of CSS variables to define global, reusable properties.
