@@ -1,10 +1,13 @@
 ---
+import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+const { frontmatter } = Astro.props;
 //TODO 6: Fill in all placeholders based on blog metadata properties
 ---
 <Navigation />
-<h1>##Blog Title##</h1>
+<h1>{frontmatter.blogTitle}</h1>
 <article>    
-    <p><em>By ##Author Name## on ##Publish Date##</em></p>
+    <p><em>By {frontmatter.authorName} on {new Date(frontmatter.publishDate).toDateString()}</em></p>
     <slot />
 </article>
+<Footer />

@@ -3,24 +3,13 @@
 //TODO 2: Define a constant "pageTitle" and pass it down as a property to BaseLayout, replacing the heading <h1>
 //TODO 3: Create a reusable Contact footer component (just like Navigation) and include it at the bottom of BaseLayout
 import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
+const pageTitle = "Home Page";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-        <meta name="viewport" content="width=device-width">
-        <meta name="generator" content={Astro.generator}>
-		<title>Blogging with Astro</title>
-	</head>
-	<body>
-        <header>
-            <h2>Home Page</h2>
-            <Navigation />
-        </header>
+<BaseLayout pageTitle={pageTitle}>
         <main>
 		    <p>Welcome to My First Astro Site...</p>
         </main>
-	</body>
-</html>
+</BaseLayout>

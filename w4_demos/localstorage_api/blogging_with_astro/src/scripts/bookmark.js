@@ -3,14 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementsByClassName("bookmarkBtn")[0];
     if (!btn)
         return;
+    const key = btn.dataset.id;
 
     //load button's current state and display button text accordingly
-    const currState = false;
+    let storedVal = localStorage.getItem(key);
+    if(storedVal === null){
+      const defaultVal = JSON.stringify({isBookmarked: false});
+      localStorage.setItem(key, defaultVal);
+      storedVal = defaultVal;
+    }
+    const currState = JSON.parse(storedVal).isBookmarked;
     displayButtonText(currState);
 
     //Toggle state on click and display button text accordingly
     btn.addEventListener("click", () => {
       const newState = !currState; 
+      const newVal = JSON.stringify({isBookmarked: newState});
+      localStorage.setItem(key, newVal);
       displayButtonText(newState);
     });
   

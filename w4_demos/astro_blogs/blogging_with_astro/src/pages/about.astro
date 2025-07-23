@@ -9,6 +9,7 @@ const bio = {
   course: "MSCS",
   school: "UCSD",
   hobbies: ["playing the guitar", "charcoal-sketching", "blogging"],
+  //hobbies: [],
 };
 const hobbyColor = "coral";
 ---
@@ -21,6 +22,11 @@ const hobbyColor = "coral";
     <meta name="generator" content={Astro.generator} />
     <title>Blogging with Astro</title>
     <!-- TODO 8: Add internal style passing 'hobbyColor' as a variable using define:vars directive  -->
+    <style define:vars={{ hobbyColor }}>
+        .hobby{
+          color: var(--hobbyColor, "blue");
+        }
+    </style>
   </head>
   <body>
     <header>
@@ -30,6 +36,12 @@ const hobbyColor = "coral";
     <main>
         <p>Hi, I am {bio.firstName+" "+bio.lastName}! I currently located in {bio.location}, studying {bio.course} at {bio.school}.</p>
         <!-- TODO 7: Display a list of hobbies only if the hobbies array is non-empty  -->
-    </main>
+        {bio.hobbies.length>0 && (
+          <p>In my free time, I love</p>
+          <ul>
+            {bio.hobbies.map((hobby) => {return (<li class="hobby">{hobby}</li>)})}
+          </ul>
+        )}
+    </main> 
   </body>
 </html>

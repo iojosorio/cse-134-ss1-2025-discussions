@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
 <article>    
     <p><em>By {frontmatter.authorName} on {new Date(frontmatter.publishDate).toDateString()}</em></p>
     <slot />
-    <button class="bookmarkBtn">🔖 Bookmark</button>
+    <button class="bookmarkBtn" data-id={frontmatter.id}>🔖 Bookmark</button>
 </article>
 <Contact />
 <script type="module" src="../src/scripts/bookmark.js"></script>
