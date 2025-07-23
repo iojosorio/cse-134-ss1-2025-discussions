@@ -1,0 +1,10 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+}
+main{
+    min-height: 20rem;
+}
+nav, footer {
+    margin: 1rem 0;
+}

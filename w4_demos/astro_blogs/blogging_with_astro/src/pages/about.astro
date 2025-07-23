@@ -1,0 +1,35 @@
+---
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
+const pageTitle = "About Me";
+const bio = {
+  firstName: "Rashi",
+  lastName: "Bhansali",
+  location: "California",
+  course: "MSCS",
+  school: "UCSD",
+  hobbies: ["playing the guitar", "charcoal-sketching", "blogging"],
+};
+const hobbyColor = "coral";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Blogging with Astro</title>
+    <!-- TODO 8: Add internal style passing 'hobbyColor' as a variable using define:vars directive  -->
+  </head>
+  <body>
+    <header>
+        <h1>{pageTitle}</h1>
+        <Navigation />
+    </header>
+    <main>
+        <p>Hi, I am {bio.firstName+" "+bio.lastName}! I currently located in {bio.location}, studying {bio.course} at {bio.school}.</p>
+        <!-- TODO 7: Display a list of hobbies only if the hobbies array is non-empty  -->
+    </main>
+  </body>
+</html>
