@@ -1,0 +1,16 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Contact from "../components/Contact.astro";
+import "../styles/global.css";
+const { frontmatter } = Astro.props;
+//TODO: Add a custom metadata id attribute for the button, to be used by JS for storing a blog's bookmark state in local storage
+---
+<Navigation />
+<h1>{frontmatter.blogTitle}</h1>
+<article>    
+    <p><em>By {frontmatter.authorName} on {new Date(frontmatter.publishDate).toDateString()}</em></p>
+    <slot />
+    <button class="bookmarkBtn">🔖 Bookmark</button>
+</article>
+<Contact />
+<script type="module" src="../src/scripts/bookmark.js"></script>

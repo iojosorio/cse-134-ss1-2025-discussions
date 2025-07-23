@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+const pageTitle = "Blog Posts";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>Here are some of my blogs...</p>
+    <ul>
+        <li><a href="/blogs/blog1">Blog 1</a></li>
+        <li><a href="/blogs/blog2">Blog 2</a></li>
+    </ul>
+</BaseLayout>

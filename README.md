@@ -39,3 +39,7 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 **Week 4: Progressive Enhancement with JS**<br><br>
 **A.** `w4_demos/astro_blogs`: Demo blog site generated using Astro SSG, inspired by [this tutorial](https://docs.astro.build/en/tutorial/0-introduction/). Explores features like reusable layouts & components, and markdown support.
 - `README.md`: This guide helps you set up and run your Astro site on your local machine. It also describes the project structure.
+
+**B.** `w4_demos/localstorage_api`: The same blog site generated earlier is enhanced with a **_bookmarking_** feature using basic JS. Also demonstrates the use of `localStorage API` for persistence.
+- `src/layouts/BlogLayout.astro`: Modified to show and manage a bookmark button on each blog
+- `src/scripts/bookmark.js`: JS helper to toggle on click, and persist the _isBookmarked_ state in **localStorage**

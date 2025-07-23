@@ -1,0 +1,48 @@
+---
+import Contact from "../components/Contact.astro";
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
+const pageTitle = "About Me";
+const bio = {
+  firstName: "Rashi",
+  lastName: "Bhansali",
+  location: "California",
+  course: "MSCS",
+  school: "UCSD",
+  hobbies: ["playing the guitar", "charcoal-sketching", "blogging"],
+};
+const hobbyColor = "coral";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Blogging with Astro</title>
+    <style define:vars={{ hobbyColor }}>
+      .hobby{
+        color: var(--hobbyColor);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>{pageTitle}</h1>
+        <Navigation />
+    </header>
+    <main>
+        <p>Hi, I am {bio.firstName+" "+bio.lastName}! I currently located in {bio.location}, studying {bio.course} at {bio.school}.</p>
+        {
+          bio.hobbies.length && (
+            <p>In my free time, I love</p>
+            <ul>
+              {bio.hobbies.map((hobby) => (<li class="hobby">{hobby}</li>))}
+            </ul>
+          )
+        }
+    </main>
+    <Contact />
+  </body>
+</html>

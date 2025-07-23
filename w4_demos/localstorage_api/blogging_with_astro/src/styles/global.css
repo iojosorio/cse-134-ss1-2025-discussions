@@ -1,0 +1,17 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+}
+main{
+    min-height: 20rem;
+}
+nav, footer {
+    margin: 1rem 0;
+}
+button {
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+  
