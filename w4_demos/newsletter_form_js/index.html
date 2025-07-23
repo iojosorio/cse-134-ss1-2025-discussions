@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms and JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Join My Newsletter</h1>
+  <!-- TODO: disable the default HTML validation -->
+  <form id="newsletter-form">
+    <label>
+      Email:
+      <input type="email" id="email" required>
+    </label>
+    <label>
+      Interests:
+      <select id="interest" required>
+        <option value="">Select one</option>
+        <option value="tech">Technology</option>
+        <option value="music">Music</option>
+        <option value="travel">Travel</option>
+      </select>
+    </label>
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <div id="confirmation" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
