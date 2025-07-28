@@ -36,11 +36,16 @@
     
 
     //Load cards
-    window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("DOMContentLoaded", async() => {
       const container = document.getElementById("gallery");
       
       //TODO: fetch show data from remote server
-      
+      const response = await fetch("http://localhost:3001/shows");
+      if(!response.ok) {
+        throw new Error("Didn't fetch");
+      }
+      const shows = await response.json();
+      console.log("Data loaded", shows);
       shows.forEach(show => {
         const card = document.createElement("netflix-show");
         card.setAttribute("id", show.id);

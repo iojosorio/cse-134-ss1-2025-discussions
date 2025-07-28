@@ -5,7 +5,8 @@ class LeakyBox extends HTMLElement {
     connectedCallback() {
       //TODO: add a style in the innerHTML to override paragraph's color
       this.innerHTML = 
-      `<p>This should be styled independently, but is it?</p> `;
+      `<style> p {color: green} </style>
+      <p>This should be styled independently, but is it?</p> `;
     }
   }
   customElements.define('leaky-box', LeakyBox);
