@@ -58,3 +58,5 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 - `netflix-gallery.html`: The same Netflix site now fetches data from a remote server using `fetch()`.
 - `netflix-gallery.html`: The same Netflix site now fetches data from a remote server using `XHR`.
 - `netflix-show.js`: Added **localStorage** to store the metadata (watchlisted status).
+
+**C** `w5_demos/shadow_dom`: Demonstrate the need for **Shadow DOM** due to leaky styles (_web components_).

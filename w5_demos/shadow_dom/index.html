@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow DOM Demo</title>
+  <style>
+    /* Site-wide style that accidentally affects all paragraphs including ones within custom elements */
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Without Shadow DOM (Leaky)</h1>
+
+  <leaky-box>
+    <!-- Custom element logic -->
+  </leaky-box>
+  <my-leaky></my-leaky>
+  <p>This should be red</p>
+  
+  <script type="module" src="./leaky-element.js"></script>
+  <!-- <script type="module" src="./shadow-element.js"></script> -->
+</body>
+</html>
