@@ -1,0 +1,28 @@
+{
+  "shows": [
+    {
+      "id": 1,
+      "title": "Stranger Things",
+      "genre": "Sci-Fi, Thriller",
+      "image": "https://images.ctfassets.net/4cd45et68cgf/22eaxyrfqLTOmD0ZgFJDX0/6d7b8a0f4c3130fd87c9921cbd11d180/image5.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Schitt's Creek",
+      "genre": "Comedy, Drama",
+      "image": "https://goldenglobes.com/wp-content/uploads/2023/10/Schitts-Creek.jpg"
+    },
+    {
+      "id": 3,
+      "title": "The Crown",
+      "genre": "Historical Drama",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/The_Crown_season_6.jpg/250px-The_Crown_season_6.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Squid Game",
+      "genre": "Drama, Survival Thriller",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq5LiH_1dacOCR2EGPNazKR8U6gmko9eIXUg&s"
+    }
+  ]
+}

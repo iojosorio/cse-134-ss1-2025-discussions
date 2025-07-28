@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #141414;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+  </style>
+</head>
+<body>
+  <hgroup>
+    <h1>Top Netflix Shows</h1>
+    <p>Click to watchlist</p>
+  </hgroup>
+
+  <div id="gallery"></div>
+
+  <!-- Load the custom element -->
+  <script type="module" src="./netflix-show.js"></script>
+
+  <script>
+    
+
+    //Load cards
+    window.addEventListener("DOMContentLoaded", async() => {
+      const container = document.getElementById("gallery");
+      
+      //TODO: fetch show data from remote server
+      
+      shows.forEach(show => {
+        const card = document.createElement("netflix-show");
+        card.setAttribute("id", show.id);
+        card.setAttribute("title", show.title);
+        card.setAttribute("genre", show.genre);
+        card.setAttribute("image", show.image);
+        container.appendChild(card);
+      });
+
+    container.addEventListener("watchlist-toggle", (e) => { 
+        const element = e.target; //fetches the specific card that was clicked
+        console.log(`Watchlist toggled for: ${element.getAttribute("title")}`);
+     });
+    });
+  </script>
+</body>
+</html>

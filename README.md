@@ -45,3 +45,15 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 **C.** `w4_demos/localstorage_api`: The same blog site generated earlier is enhanced with a **_bookmarking_** feature using basic JS. Also demonstrates the use of `localStorage API` for persistence.
 - `src/layouts/BlogLayout.astro`: Modified to show and manage a bookmark button on each blog
 - `src/scripts/bookmark.js`: JS helper to toggle on click, and persist the _isBookmarked_ state in **localStorage**
+
+**Week 5: Custom Elements and Events with JS**<br><br>
+**A.** `w5_demos/netflix_custom_element`: 
+- `netflix-gallery-expected.html`: A static HTML file to show the expected output - div soup and lots of repetitions.
+- `netflix-gallery.html`: HTML enhanced with custom element `netflix-show` to display the repeated show cards (static JSON data), added to the Light DOM using JS.
+- `netflix-show.js`: JS module to **create custom element** with desired behavior - toggle the "watchlisted" badge on a show card when clicked, using **event delegation**.
+- `netflix-show-css.js`: JS module to export styles for the custom component.
+
+**B.** `w5_demos/netflix_remote_fetch`: 
+- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server (**json-server** setup locally) using `fetch()`.
+- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server (**json-server** setup locally) using `XHR`.
+- `netflix-show.js`: Added **localStorage** to store the metadata (watchlisted status).

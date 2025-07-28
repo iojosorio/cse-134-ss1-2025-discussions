@@ -1,0 +1,127 @@
+<!-- You can open this on live server to get an idea what we expect the final page to look like - no work or modification to be done here: -->
+<!-- I didn't add the custom event but it should be easy to do. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netflix Gallery - Expected Output</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #141414;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .show-card {
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      text-align: left;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s ease;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .show-card:hover {
+      transform: scale(1.05);
+    }
+
+    .show-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .info {
+      padding: 10px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .genre {
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    .badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: red;
+      color: white;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 5px;
+      display: none; /* hidden by default */
+    }
+
+    /* Example watchlisted badge shown on first card */
+    .show-card.watchlisted .badge {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <hgroup>
+    <h1>Top Netflix Shows</h1>
+    <p>Click to watchlist</p>
+  </hgroup>
+
+  <div id="gallery">
+
+    <div class="show-card watchlisted">
+      <span class="badge">WATCHLISTED</span>
+      <img src="https://images.ctfassets.net/4cd45et68cgf/22eaxyrfqLTOmD0ZgFJDX0/6d7b8a0f4c3130fd87c9921cbd11d180/image5.jpg" alt="Stranger Things poster">
+      <div class="info">
+        <div class="title">Stranger Things</div>
+        <div class="genre">Sci-Fi, Thriller</div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <span class="badge">WATCHLISTED</span>
+      <img src="https://goldenglobes.com/wp-content/uploads/2023/10/Schitts-Creek.jpg" alt="Schitt's Creek poster">
+      <div class="info">
+        <div class="title">Schitt's Creek</div>
+        <div class="genre">Comedy, Drama</div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <span class="badge">WATCHLISTED</span>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/The_Crown_season_6.jpg/250px-The_Crown_season_6.jpg" alt="The Crown poster">
+      <div class="info">
+        <div class="title">The Crown</div>
+        <div class="genre">Historical Drama</div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <span class="badge">WATCHLISTED</span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq5LiH_1dacOCR2EGPNazKR8U6gmko9eIXUg&s" alt="Squid Game poster">
+      <div class="info">
+        <div class="title">Squid Game</div>
+        <div class="genre">Drama, Survival Thriller</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
