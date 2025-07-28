@@ -54,6 +54,7 @@ Weekly Discussions and Demos - CSE 134B SS1 (2025)
 - `netflix-show-css.js`: JS module to export styles for the custom component.
 
 **B.** `w5_demos/netflix_remote_fetch`: 
-- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server (**json-server** setup locally) using `fetch()`.
-- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server (**json-server** setup locally) using `XHR`.
+- `README.txt`: Steps to setup `json-server` locally using npm install.
+- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server using `fetch()`.
+- `netflix-gallery.html`: The same Netflix site now fetches data from a remote server using `XHR`.
 - `netflix-show.js`: Added **localStorage** to store the metadata (watchlisted status).
